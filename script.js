@@ -77,7 +77,7 @@ function locomotiveAnimation() {
     tl.to("#loader", {
       display: "none",
     });
-    tl.from(".elems", {
+    tl.from(".elems,#whole", {
       opacity: 0,
       delay: 0.1,
       y: 1600,
@@ -152,7 +152,7 @@ function locomotiveAnimation() {
     Shery.imageEffect(".square-in",{
         style:5,
         gooey:true,
-        config:{"a":{"value":1.37,"range":[0,30]},"b":{"value":0.95,"range":[-1,1]},"zindex":{"value":"9996999","range":[-9999999,9999999]},"aspect":{"value":0.8354107648725212},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":0},"noise_speed":{"value":1.15,"range":[0,10]},"metaball":{"value":0.5,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]}}
+        config:{"a":{"value":1.37,"range":[0,30]},"b":{"value":0.95,"range":[-1,1]},"zindex":{"value":"999","range":[-999,999]},"aspect":{"value":0.8354107648725212},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":0},"noise_speed":{"value":1.15,"range":[0,10]},"metaball":{"value":0.5,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":10,"range":[0,100]}}
     })
 
     Shery.imageMasker("#lets-connect h1" /* Element to target.*/, {
@@ -216,15 +216,13 @@ function locomotiveAnimation() {
     }
   }
   function selection(){
-    if(window.location.href.indexOf('index.html') > -1){
-      var portfolio = document.querySelector("#p1");
-      p1.style.backgroundColor = "#FAEBD7" 
-      p1.style.color = "black"
-    }
-    else if(window.location.href.indexOf('about.html') > -1){
+    if(window.location.href.indexOf('about.html') > -1){
       var about = document.querySelector("#p2");
+      var portfolio = document.querySelector("#p1");
       about.style.backgroundColor = "#FAEBD7";
       about.style.color = "black";
+      p1.style.backgroundColor = "#131313";
+      p1.style.color = "white";
     }
   }
 
