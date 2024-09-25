@@ -216,8 +216,8 @@ body{
 }
 #p1{
   margin-left: 1vw;
-  background-color: antiquewhite;
-  color: black;
+  /* background-color: antiquewhite; */
+  color: rgb(233, 229, 229);
 }
 .elems{
   font-weight: 100;

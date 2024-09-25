@@ -215,6 +215,20 @@ function locomotiveAnimation() {
       })
     }
   }
+  function selection(){
+    if(window.location.href.indexOf('index.html') > -1){
+      var portfolio = document.querySelector("#p1");
+      p1.style.backgroundColor = "#FAEBD7" 
+      p1.style.color = "black"
+    }
+    else if(window.location.href.indexOf('about.html') > -1){
+      var about = document.querySelector("#p2");
+      about.style.backgroundColor = "#FAEBD7";
+      about.style.color = "black";
+    }
+  }
+
+  selection();
   footerAnimation();
   video();
   locomotiveAnimation();
