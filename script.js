@@ -174,42 +174,46 @@ function locomotiveAnimation() {
     });
   }
   function footerAnimation() {
-      var h1 = document.querySelector("#history h1");
-      var h2 = document.querySelector("history h2");
-      var content = h1.textContent;
-      var splitted = content.split("");
-      console.log(splitted);
-      // var content2 = h2.textContent;
-      // var splitted2 = content2.split("");
-      // console.log(splitted2);
-      var cluster = "";
-      splitted.forEach(function(elem){
-        cluster += `<span>${elem}</span>`
-      })
-      document.querySelector("#history h1").innerHTML = cluster
+      if(window.location.href.indexOf('index.html') > -1){}
+      else if(window.location.href.indexOf('about.html') > -1)
+      {
+        var h1 = document.querySelector("#history h1");
+        var h2 = document.querySelector("history h2");
+        var content = h1.textContent;
+        var splitted = content.split("");
+        console.log(splitted);
+        // var content2 = h2.textContent;
+        // var splitted2 = content2.split("");
+        // console.log(splitted2);
+        var cluster = "";
+        splitted.forEach(function(elem){
+          cluster += `<span>${elem}</span>`
+        })
+        document.querySelector("#history h1").innerHTML = cluster
 
-      document.querySelector("#history h1").addEventListener("mouseenter", function () {
-      gsap.to("#history h1 span", {
-        webkitTextStroke: "2px black",
-        color:"transparent",
-        stagger: 0.1,
-        duration:0.5,
-        scrub:true,
-        fontStyle: "italic",
-        textShadow:"none"
+        document.querySelector("#history h1").addEventListener("mouseenter", function () {
+        gsap.to("#history h1 span", {
+          webkitTextStroke: "2px black",
+          color:"transparent",
+          stagger: 0.1,
+          duration:0.5,
+          scrub:true,
+          fontStyle: "italic",
+          textShadow:"none"
+        })
       })
-    })
-    document.querySelector("#history h1").addEventListener("mouseleave", function () {
-      gsap.to("#history h1 span", {
-        opacity: 1,
-        color:"black",
-        webkitTextStroke: "0px black",
-        stagger: 0.1,
-        delay: 0.35,
-        fontStyle:"normal",
-        textShadow: "2px 2px 4px #000, -1px -1px 2px rgba(255, 255, 255, 0.5)"
+      document.querySelector("#history h1").addEventListener("mouseleave", function () {
+        gsap.to("#history h1 span", {
+          opacity: 1,
+          color:"black",
+          webkitTextStroke: "0px black",
+          stagger: 0.1,
+          delay: 0.35,
+          fontStyle:"normal",
+          textShadow: "2px 2px 4px #000, -1px -1px 2px rgba(255, 255, 255, 0.5)"
+        })
       })
-    })
+    }
   }
   footerAnimation();
   video();
