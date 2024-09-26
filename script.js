@@ -165,7 +165,7 @@ function locomotiveAnimation() {
   }
   function video(){
     Shery.imageEffect("#project-in img", {
-      style: 5,
+      style: 1,
       slideStyle: (setScroll) => {
         window.addEventListener("scroll", () => {
           setScroll(window.scrollY / innerHeight); //Updating the scroll
@@ -225,10 +225,10 @@ function locomotiveAnimation() {
       p1.style.color = "white";
     }
   }
-
+  video();
   selection();
   footerAnimation();
-  video();
+  // video();
   locomotiveAnimation();
   loadingAnimation();
   cursorAnimation();
